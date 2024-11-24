@@ -1,0 +1,44 @@
+{
+	"name": "ds_src_bin",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "datalake_dev",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"container_b": {
+				"type": "string"
+			},
+			"directory_b": {
+				"type": "string"
+			},
+			"file_name_b": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().file_name_b",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().directory_b",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().container_b",
+					"type": "Expression"
+				}
+			},
+			"compression": {
+				"type": "ZipDeflate",
+				"level": "Optimal"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

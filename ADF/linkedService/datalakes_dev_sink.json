@@ -1,0 +1,22 @@
+{
+	"name": "datalakes_dev_sink",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://datalakecicddevsink.dfs.core.windows.net",
+			"tenant": "7293a20b-5216-4753-b4bf-0a444e52d383",
+			"servicePrincipalId": "799649de-36ed-4e6d-9f5e-643f41cdc676",
+			"servicePrincipalCredentialType": "ServicePrincipalKey",
+			"servicePrincipalCredential": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "data-app-secret"
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"name": "adf-mehfuz-dev",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "cad526e4-ee3b-4503-8fc1-3c910af2f167",
+		"tenantId": "7293a20b-5216-4753-b4bf-0a444e52d383"
+	}
+}
